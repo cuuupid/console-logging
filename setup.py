@@ -9,7 +9,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='console-logging',
-    version='0.0.1',
+    version='0.0.2',
     description='Better, prettier commandline logging.',
     long_description=long_description,
     url='https://github.com/pshah123/console-logging',
