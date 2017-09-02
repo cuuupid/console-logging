@@ -2,6 +2,9 @@
 
 Better console logging for Python.
 
+Find us on PyPi: https://pypi.python.org/pypi/console-logging
+
+
 ![Showcase](https://github.com/pshah123/console-logging/raw/master/images/example.png "Demo of console-logging")
 
 ## Getting Started
