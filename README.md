@@ -2,7 +2,7 @@
 
 Better console logging for Python.
 
-![Showcase](https://github.com/pshah123/console-logging/images/example.png "Demo of console-logging")
+![Showcase](https://github.com/pshah123/console-logging/raw/master/images/example.png "Demo of console-logging")
 
 ## Getting Started
 
