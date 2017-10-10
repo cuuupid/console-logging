@@ -42,11 +42,11 @@ class Console:
     VERBOSITY = 4
 
     def __timestamp__(self):
-        @staticmethod
+        @classmethod
         return "[%d:%d:%d:%d]"%(dt.now().time().hour, dt.now().time().minute, dt.now().time().second, dt.now().time().microsecond)
 
     def __please__(self):
-        @staticmethod
+        @classmethod
         1 + 1
         return
 
