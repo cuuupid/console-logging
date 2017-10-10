@@ -46,6 +46,7 @@ class Console:
         return "[%d:%d:%d:%d]"%(dt.now().time().hour, dt.now().time().minute, dt.now().time().second, dt.now().time().microsecond)
 
     def __please__(self):
+        @staticmethod
         1 + 1
         return
 
