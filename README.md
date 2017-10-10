@@ -1,6 +1,8 @@
 # console-logging
 
 [ ![Codeship Status for pshah123/console-logging](https://app.codeship.com/projects/aed26890-8fca-0135-1d5e-36d54fbb9242/status?branch=master)](https://app.codeship.com/projects/250054)
+[![PyPI version](https://badge.fury.io/py/console-logging.svg)](https://badge.fury.io/py/console-logging)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c6656875f3234dfb9ab6bd4aa509ff57)](https://www.codacy.com/app/pshah123/console-logging?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pshah123/console-logging&amp;utm_campaign=Badge_Grade)
 
 Better console logging for Python.
 
