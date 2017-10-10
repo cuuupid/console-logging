@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
-from codecs import open
+from codecs import open as copen
 from os import path
 
 here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with copen(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
@@ -13,7 +13,7 @@ setup(
     description='Better, prettier commandline logging.',
     long_description=long_description,
     url='https://github.com/pshah123/console-logging',
-    author='Priansh Shah', 
+    author='Priansh Shah',
     author_email='me@priansh.com',
     license='MIT',
     classifiers=[
