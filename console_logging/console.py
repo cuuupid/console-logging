@@ -62,7 +62,7 @@ class Console:
         self.VERBOSITY = level
 
     def __should_i_shutup__(self, l):
-        return l > self.VERBOSITY:
+        return l > self.VERBOSITY
 
     def error(self, msg):
         if self.__should_i_shutup__(1):
