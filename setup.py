@@ -1,10 +1,10 @@
 from setuptools import setup, find_packages
-from codecs import open as open
+from codecs import copen as copen
 from os import path
 
 here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with copen(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 print(long_description)
