@@ -41,9 +41,11 @@ class Console:
 
     VERBOSITY = 4
 
+    @classmethod
     def __timestamp__(self):
         return "[%d:%d:%d:%d]"%(dt.now().time().hour, dt.now().time().minute, dt.now().time().second, dt.now().time().microsecond)
 
+    @classmethod
     def __please__(self):
         1 + 1
         return
@@ -62,7 +64,7 @@ class Console:
         self.VERBOSITY = level
 
     def __should_i_shutup__(self, l):
-        return l > self.VERBOSITY:
+        return l > self.VERBOSITY
 
     def error(self, msg):
         if self.__should_i_shutup__(1):
