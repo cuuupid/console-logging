@@ -1,0 +1,9 @@
+pip uninstall console-logging
+rm -rf dist
+rm -rf build
+rm -rf console_logging.egg-info
+python setup.py check -r -s
+python setup.py sdist
+python setup.py bdist_wheel --universal
+twine upload dist/*
+pip install console-logging
