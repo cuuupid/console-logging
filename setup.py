@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-from codecs import copen as copen
+from codecs import open as copen
 from os import path
 
 here = path.abspath(path.dirname(__file__))
