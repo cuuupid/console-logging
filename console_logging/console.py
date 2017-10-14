@@ -10,20 +10,26 @@ TAGS = {
     'success': colored("[SUCCESS]", color="white", on_color="on_green")
 }
 
+
 def __timestamp__():
-    return "[%d:%d:%d:%d]"%(dt.now().time().hour, dt.now().time().minute, dt.now().time().second, dt.now().time().microsecond)
+    return "[%d:%d:%d:%d]" % (dt.now().time().hour, dt.now().time().minute, dt.now().time().second, dt.now().time().microsecond)
+
 
 def __print__(tag="", msg=""):
     print("%s%s : %s" % (__timestamp__(), tag, msg))
 
+
 def error(msg):
     __print__(tag=TAGS['error'], msg=msg)
+
 
 def log(msg):
     __print__(tag=TAGS['log'], msg=msg)
 
+
 def info(msg):
     __print__(tag=TAGS['info'], msg=msg)
+
 
 def success(msg):
     __print__(tag=TAGS['success'], msg=msg)
@@ -41,9 +47,13 @@ class Console:
 
     VERBOSITY = 4
 
-    @classmethod
+    SHOW_TIME = True
+
     def __timestamp__(self):
-        return "[%d:%d:%d:%d]"%(dt.now().time().hour, dt.now().time().minute, dt.now().time().second, dt.now().time().microsecond)
+        if self.SHOW_TIME:
+            return "[%d:%d:%d:%d]" % (dt.now().time().hour, dt.now().time().minute, dt.now().time().second, dt.now().time().microsecond)
+        else:
+            return ""
 
     @classmethod
     def __please__(self):
@@ -55,6 +65,17 @@ class Console:
 
     def mute(self):
         self.VERBOSITY = 0
+
+    def monotone(self):
+        self.TAGS = {
+            'error': "[ERR]",
+            'log': "[LOG]",
+            'info': "[INFO]",
+            'success': "[SUCCESS]"
+        }
+    
+    def timeless(self):
+        self.SHOW_TIME = False
 
     def setVerbosity(self, level):
         if level > 5:
