@@ -30,7 +30,7 @@ pip install console-logging
 
 #### New:
 
-```
+``` python
 from console_logging.console import Console
 console = Console()
 
@@ -39,7 +39,7 @@ console.log("Hello world!")
 
 #### Old:
 
-```
+``` python
 from console_logging import console
 
 console.log("Hello World!")
@@ -48,7 +48,7 @@ console.log("Hello World!")
 
 ### Exhaustive Reference
 
-```
+``` python
 console.log("This is a log.")
 console.error("This is an error.")
 console.info("This is some neutral info.")
