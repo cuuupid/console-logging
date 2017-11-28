@@ -106,7 +106,7 @@ Credit
 
 setup(
     name='console-logging',
-    version='0.0.3.8',
+    version='0.0.4.0',
     description='Better, prettier commandline logging.',
     long_description=long_description,
     url='https://github.com/pshah123/console-logging',
