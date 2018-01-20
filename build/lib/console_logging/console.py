@@ -4,9 +4,9 @@ from termcolor import colored
 
 # Old features
 TAGS = {
-    'error': colored("[ERR]", color="white", on_color="on_red"),
-    'log': colored("[LOG]", attrs=['reverse']),
-    'info': colored("[INFO]", color="grey", on_color="on_yellow"),
+    'error': colored("[  ERR  ]", color="white", on_color="on_red"),
+    'log': colored("[  LOG  ]", attrs=['reverse']),
+    'info': colored("[ INFO  ]", color="grey", on_color="on_yellow"),
     'success': colored("[SUCCESS]", color="white", on_color="on_green")
 }
 
@@ -39,9 +39,9 @@ def success(msg):
 class Console:
 
     TAGS = {
-        'error': colored("[ERR]", color="white", on_color="on_red"),
-        'log': colored("[LOG]", attrs=['reverse']),
-        'info': colored("[INFO]", color="grey", on_color="on_yellow"),
+        'error': colored("[  ERR  ]", color="white", on_color="on_red"),
+        'log': colored("[  LOG  ]", attrs=['reverse']),
+        'info': colored("[ INFO  ]", color="grey", on_color="on_yellow"),
         'success': colored("[SUCCESS]", color="white", on_color="on_green")
     }
 
@@ -68,9 +68,9 @@ class Console:
 
     def monotone(self):
         self.TAGS = {
-            'error': "[ERR]",
-            'log': "[LOG]",
-            'info': "[INFO]",
+            'error': "[  ERR  ]",
+            'log': "[  LOG  ]",
+            'info': "[ INFO  ]",
             'success': "[SUCCESS]"
         }
     

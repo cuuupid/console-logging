@@ -1,15 +1,22 @@
 from datetime import datetime as dt
-
+import platform
 from termcolor import colored
 
 # Old features
 TAGS = {
-    'error': colored("[ERR]", color="white", on_color="on_red"),
-    'log': colored("[LOG]", attrs=['reverse']),
-    'info': colored("[INFO]", color="grey", on_color="on_yellow"),
+    'error': colored("[  ERR  ]", color="white", on_color="on_red"),
+    'log': colored("[  LOG  ]", attrs=['reverse']),
+    'info': colored("[ INFO  ]", color="grey", on_color="on_yellow"),
     'success': colored("[SUCCESS]", color="white", on_color="on_green")
 }
 
+if platform.system() == 'Windows':
+    TAGS = {
+            'error': "[  ERR  ]",
+            'log': "[  LOG  ]",
+            'info': "[ INFO  ]",
+            'success': "[SUCCESS]"
+    }
 
 def __timestamp__():
     return "[%d:%d:%d:%d]" % (dt.now().time().hour, dt.now().time().minute, dt.now().time().second, dt.now().time().microsecond)
@@ -39,15 +46,19 @@ def success(msg):
 class Console:
 
     TAGS = {
-        'error': colored("[ERR]", color="white", on_color="on_red"),
-        'log': colored("[LOG]", attrs=['reverse']),
-        'info': colored("[INFO]", color="grey", on_color="on_yellow"),
+        'error': colored("[  ERR  ]", color="white", on_color="on_red"),
+        'log': colored("[  LOG  ]", attrs=['reverse']),
+        'info': colored("[ INFO  ]", color="grey", on_color="on_yellow"),
         'success': colored("[SUCCESS]", color="white", on_color="on_green")
     }
 
     VERBOSITY = 4
 
     SHOW_TIME = True
+
+    def __init__(self):
+        if platform.system() == 'Windows':
+            self.monotone()
 
     def __timestamp__(self):
         if self.SHOW_TIME:
@@ -68,9 +79,9 @@ class Console:
 
     def monotone(self):
         self.TAGS = {
-            'error': "[ERR]",
-            'log': "[LOG]",
-            'info': "[INFO]",
+            'error': "[  ERR  ]",
+            'log': "[  LOG  ]",
+            'info': "[ INFO  ]",
             'success': "[SUCCESS]"
         }
     
