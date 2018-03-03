@@ -1,5 +1,5 @@
 from datetime import datetime as dt
-
+import platform
 from termcolor import colored
 
 # Old features
@@ -10,6 +10,13 @@ TAGS = {
     'success': colored("[SUCCESS]", color="white", on_color="on_green")
 }
 
+if platform.system() == 'Windows':
+    TAGS = {
+            'error': "[  ERR  ]",
+            'log': "[  LOG  ]",
+            'info': "[ INFO  ]",
+            'success': "[SUCCESS]"
+    }
 
 def __timestamp__():
     return "[%d:%d:%d:%d]" % (dt.now().time().hour, dt.now().time().minute, dt.now().time().second, dt.now().time().microsecond)
@@ -48,6 +55,10 @@ class Console:
     VERBOSITY = 4
 
     SHOW_TIME = True
+
+    def __init__(self):
+        if platform.system() == 'Windows':
+            self.monotone()
 
     def __timestamp__(self):
         if self.SHOW_TIME:
