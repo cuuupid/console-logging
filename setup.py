@@ -109,9 +109,9 @@ setup(
     version='0.0.5.0',
     description='Better, prettier commandline logging.',
     long_description=long_description,
-    url='https://github.com/pshah123/console-logging',
-    author='Priansh Shah',
-    author_email='me@priansh.com',
+    url='https://github.com/cuuupid/console-logging',
+    author='cuuupid 💔',
+    author_email='cuuupid@sleazysantas.io',
     license='MIT',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
